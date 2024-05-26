@@ -1,0 +1,44 @@
+#card {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 1.25rem;
+}
+@media (min-width: 821px) {
+  #card {
+    gap: 2.5rem;
+    place-items: flex-start;
+  }
+}
+#card div {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 0.5rem;
+}
+@media (min-width: 821px) {
+  #card div {
+    gap: 0.5rem;
+    place-items: flex-start;
+  }
+}
+#card div a {
+  align-self: stretch;
+  margin-top: 1rem;
+}
+#card img {
+  border: 1px solid hsl(216, 100%, 50%);
+  border-radius: 1rem;
+}
+@media (min-width: 821px) {
+  #card.card {
+    flex-direction: row;
+  }
+  #card.reverso {
+    flex-direction: row-reverse;
+    gap: 0 2.5rem;
+  }
+  #card img {
+    width: 45vw;
+  }
+}/*# sourceMappingURL=styles.css.map */

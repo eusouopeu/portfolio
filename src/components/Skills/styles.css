@@ -1,0 +1,30 @@
+#skills {
+  align-items: center;
+}
+#skills section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#skills section table {
+  display: inline-flex;
+  width: 18rem;
+  min-width: 18rem;
+}
+#skills section table tr {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+@media (min-width: 821px) {
+  #skills {
+    align-items: stretch;
+  }
+  #skills section {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #skills section table {
+    width: 25vw;
+  }
+}/*# sourceMappingURL=styles.css.map */
