@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heroicons/heroicons.dart';
+import 'package:portfolio/utils/downloads.dart';
 
 class CertificateCard extends StatelessWidget {
   const CertificateCard({
@@ -7,6 +8,8 @@ class CertificateCard extends StatelessWidget {
     required this.title,
     required this.date,
     required this.institution,
+    this.url,
+    this.fileName,
     this.color1,
     this.color2,
     this.textColor,
@@ -18,13 +21,14 @@ class CertificateCard extends StatelessWidget {
   final dynamic color1;
   final dynamic color2;
   final dynamic textColor;
+  final dynamic url;
+  final dynamic fileName;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
-      onHover: (value) => {
-        //
+      onPressed: () {
+        // saveFileFromAssets(url, fileName);
       },
       child: Container(
         decoration: BoxDecoration(

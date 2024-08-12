@@ -52,6 +52,8 @@ class About extends StatelessWidget {
                         title: 'Figma',
                         date: '2024',
                         institution: 'Cubos Academy',
+                        url: '/files/CertificadoFigma.pdf',
+                        fileName: 'CertificadoFigma.pdf',
                       ),
                     ],
                   ),

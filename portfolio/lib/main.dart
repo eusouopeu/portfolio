@@ -91,13 +91,14 @@ class _MyHomePageState extends State<MyHomePage> {
           background: Container(
             margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            height: 120,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  Colors.blue.shade200,
-                  Colors.blue.shade500,
+                  Colors.blue.shade300,
+                  Colors.blue.shade600,
                 ],
               ),
               borderRadius: BorderRadius.circular(32.0),

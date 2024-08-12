@@ -36,6 +36,7 @@ dependencies:
   path_provider: ^2.1.4
   permission_handler: ^11.3.1
   url_launcher: ^6.3.0
+  open_file: ^3.3.2
 
 dev_dependencies:
   flutter_test:
@@ -55,11 +56,12 @@ dev_dependencies:
 flutter:
   assets:
     - assets/
+    - assets/files/CertificadoFigma.pdf
   fonts:
     - family: Nunito
       fonts:
         - asset: assets/fonts/Nunito/static/Nunito-Regular.ttf
-        - asset: assets/fonts/Nunito/Nunito-Italic.ttf
+        - asset: assets/fonts/Nunito/static/Nunito-Italic.ttf
         - asset: assets/fonts/Nunito/static/Nunito-Bold.ttf
           weight: 700
 
