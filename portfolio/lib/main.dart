@@ -6,6 +6,7 @@ import 'package:portfolio/utils/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'views/home_screen.dart';
 import 'views/projects_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(
@@ -31,7 +32,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        fontFamily: 'Nunito',
         textTheme: typography,
       ),
       //
@@ -164,14 +164,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       //
       body: Expanded(
-        child: Container(
+        child: ConstrainedBox(
           constraints: BoxConstraints(
             maxWidth: MediaQuery.of(context).size.width,
           ),
-          child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 32.0),
-            child: _screens[_railSelectedIndex],
-          ),
+          child: _screens[_railSelectedIndex],
         ),
       ),
     );

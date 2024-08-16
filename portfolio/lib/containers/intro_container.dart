@@ -1,58 +1,70 @@
-import 'dart:io';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:heroicons/heroicons.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:portfolio/components/glassmorphism.dart';
-import '../components/glassmorphism.dart';
-
-
+import 'package:portfolio/constants/index.dart';
+import 'package:portfolio/utils/general.dart';
 
 class Intro extends StatelessWidget {
   const Intro({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 5,
-      margin: const EdgeInsets.symmetric(
-        vertical: 24.0,
-      ),
-      clipBehavior: Clip.antiAlias,
+    return Center(
       child: Container(
-          padding: const EdgeInsets.symmetric(
-            vertical: 24.0,
-          ),
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color(0x1C2195F3),
-                Color(0x3C2195F3),
-              ],
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 8.0,
+              offset: const Offset(0, 4),
             ),
+          ],
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.blue.shade300,
+              Colors.blue.shade600,
+            ],
           ),
-          width: double.infinity,
-          child: const Expanded(
-            child: const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 50.0,
-                  backgroundImage: AssetImage('assets/produto_teclado.png'),
-                ),
-                SizedBox(width: 24.0),
-                CardText(
-                  title: 'Pedro Teles',
-                  content: 'Product Manager | Front-End Developer',
-                ),
-              ],
+        ),
+        width: isDesktopDevice(context)
+            ? MediaQuery.of(context).size.width * 0.5
+            : MediaQuery.of(context).size.width * 0.8,
+        constraints: const BoxConstraints(minWidth: 320),
+        padding: const EdgeInsets.symmetric(horizontal: gap, vertical: gap),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const CircleAvatar(
+              radius: 50,
+              backgroundImage: AssetImage('assets/foto-perfil.jpg'),
             ),
-          )),
+            const SizedBox(width: gap),
+            Expanded(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Pedro Teles',
+                      style: Theme.of(context).textTheme.displayLarge),
+                  Text(
+                    'Product Manager | React.js Developer | Flutter Developer',
+                    style: Theme.of(context).textTheme.displaySmall,
+                    textWidthBasis: TextWidthBasis.parent,
+                  ),
+                  const Row(
+                    children: [
+                      Text('botões'),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

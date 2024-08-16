@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:heroicons/heroicons.dart';
 import 'package:portfolio/utils/downloads.dart';
+import 'package:portfolio/utils/general.dart';
 
 class CertificateCard extends StatelessWidget {
   const CertificateCard({
@@ -50,7 +51,9 @@ class CertificateCard extends StatelessWidget {
           ],
         ),
         padding: const EdgeInsets.all(16.0),
-        width: 240,
+        width: isDesktopDevice(context)
+            ? 200.0
+            : MediaQuery.of(context).size.width,
         child: Column(
           children: [
             HeroIcon(

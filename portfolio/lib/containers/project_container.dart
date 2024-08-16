@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:heroicons/heroicons.dart';
-import 'package:portfolio/components/glassmorphism.dart';
-import 'package:portfolio/components/project_card.dart';
-import '../components/glassmorphism.dart';
+import 'package:portfolio/widgets/glassmorphism.dart';
+import 'package:portfolio/widgets/project_card.dart';
+import '../widgets/glassmorphism.dart';
 
 class ProjectContainer extends StatelessWidget {
   const ProjectContainer({super.key});

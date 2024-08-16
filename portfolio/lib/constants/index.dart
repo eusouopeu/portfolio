@@ -7,3 +7,5 @@ Possuo experiência em Gestão de Produto e em Liderança sem Autoridade Formal 
 Propósito me move mais do que dinheiro.
 
 Contato: teles.pedro@proton.me ''';
+
+const gap = 20.0;
